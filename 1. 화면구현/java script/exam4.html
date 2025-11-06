@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // numbers = [1,2,3,4,5,6,7,8,9,10]
+        // const even = numbers.filter(x => x % 2 == 0)
+        // const double = even.map(a => a * 2)
+        // console.log(double)
+
+        // let a = [1,2,3,4,5,6,7,8,9,10]
+        // let evens = [];
+        // for(let i = 0; i < a.length; i++){
+        //     if(a[i] % 2 === 0){
+        //         evens.push(a[i]*2)
+        //     }
+        // }
+        // console.log(evens);
+        
+        // let arr = [1,2,3,4,5,6,7,8,9,10]
+        // let evenArr = arr.filter(n => n % 2 === 0).map(n => n * 2);
+        // console.log(evenArr)
+
+        //총합
+        // let score = [100, 98, 58, 71, 26, 50, 39, 45]
+        // let sum = 0;
+        // let count = 0;
+        // for(let i = 0; i < score.length; i++){
+        //     sum += score[i];
+        //     count++;
+        // }
+        // let avg = sum/count;
+        
+        // sum = score.reduce((acc, v) => acc + v, 0);
+        // avg = sum/score.length;
+
+        // console.log(avg)
+        // numbers = [1,2,3,4,5,6,7,8,9,10]
+        // total = 0
+        // for(let i = 0; i < numbers.length; i++){
+        //     total += numbers[i]
+        // }
+        // console.log(total)
+
+        numbers = [1, 2, 2, 3, 4, 4, 5, 5, 5]
+        const uniqueNumbers = [];
+        for(let i = 0; i < numbers.length; i++){
+            const currentNumbers = numbers[i];
+            if(!uniqueNumbers.includes(currentNumbers)){
+                uniqueNumbers.push(currentNumbers);
+            }
+        }
+        console.log(uniqueNumbers)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
