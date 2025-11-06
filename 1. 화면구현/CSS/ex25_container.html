@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .no-container-area{
+            background-color: aliceblue;
+            border-bottom: 2px solid #999;
+            padding: 16px;
+        }
+
+        .section-title{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+        .text-block{
+            font-size: 16px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+        .container{
+            max-width: 1200px;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- 컨테이너로 감싸서 가운데 정렬 + 최대 너비 제한 -->
+    <div class="no-container-area">
+        <div class="section-title">컨테이너를 없이 만든 영역</div>
+        <div class="text-block">
+            이 영역은 화면 전체 너비를 그대로 사용한다. 큰 모니터에서 보면
+            줄 길이가 너무 길어서 읽기 불편하다. 또한 본문이 왼쪽 위에만 붙어
+            있어서 디자인적으로 답답해 보인다.
+        </div>
+    </div>
+        <div class="container">
+            <div class="section-title">컨테이너를 사용한 영역
+            <div class="text-block">
+                이 영역은 화면 전체 너비를 그대로 사용한다. 큰 모니터에서 보면
+                줄 길이가 너무 길어서 읽기 불편하다. 또한 본문이 왼쪽 위에만 붙어
+                있어서 디자인적으로 답답해 보인다.
+            </div>
+        </div>
+</body>
+</html>

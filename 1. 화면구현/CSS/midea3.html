@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: rgb(231, 231, 231);
+        }
+        .layout{
+        }
+        header{
+            background-color: black;
+            color: white;
+            padding: 30px;
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        .posts{
+            display: flex;
+            padding: 100px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card{
+            border-radius: 10px;
+            background-color: white;
+            height: 290px;
+            overflow: hidden;
+            /* 모바일은 1열이 : 100% */
+            flex: 1 1 100px;
+        }
+        .content{
+            padding:10px
+        }
+        .title{
+            font-size: 20px;
+        }
+        .meta{
+            font-size: 10px;
+        }
+        /* 부모 영역의 너비를 100%로 채운다 */
+        .thumb{
+            width: 100%;
+            height: 130px;
+            display: block;
+        }
+        aside{
+            border-radius: 10px;
+            background-color: white;
+            padding:15px;
+            height: 150px;
+            margin: 0 auto;
+            width: 200px;
+        }
+        footer{
+            text-align: center;
+        }
+        .nav-list{
+            display: flex;
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav{
+            display: none;
+        }
+        
+        @media(min-width : 768px){
+            nav{
+                display: block;
+            }
+            .layout{
+                flex-direction: row;
+                align-items: center;
+            }
+            main{
+                flex: 1 1 auto;
+            }
+            aside{
+                flex: 0 0 260px;
+            }
+        }
+ 
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h3>My Blog</h3>
+                <nav>
+                    <ul class="nav-list">
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">카테고리</a></li>
+                        <li><a href="#">태그</a></li>
+                        <li><a href="#">정보</a></li>
+                    </ul>
+                </nav>
+        </header>
+    </div>
+    <div class="container layout">
+        <main>
+            <section class="posts">
+                <article class="card">
+                    <img class="thumb" src="../images/smog.jpg" alt="smog">
+                    <div class="content">
+                        <h3 class="title">포스트 제목1</h3>
+                        <p class="meta">2025-11-04 · 카테고리</p>
+                        <p>간단한 소개문장이다</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img class="thumb" src="../images/tree.jpg" alt="tree">
+                    <div class="content">
+                        <h3 class="title">포스트 제목2</h3>
+                        <p class="meta">2025-11-04 · 카테고리</p>
+                        <p>간단한 소개문장이다</p>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <img class="thumb" src="../images/winter.jpg" alt="winter">
+                    <div class="content">
+                        <h3 class="title">포스트 제목3</h3>
+                        <p class="meta">2025-11-04 · 카테고리</p>
+                        <p>간단한 소개문장이다</p>
+                    </div>
+                </article>
+                <aside>
+                    <h4>사이드바</h4>
+                        <ul>
+                            <li>인기 글</li>
+                            <li>최근 댓글</li>
+                            <li>카테고리</li>
+                        </ul>
+                </aside>
+            </section>
+        </main>
+        <footer>
+            <small>© 2025 My Blog. All rights reserved.</small>
+        </footer>
+    </div>
+</body>
+</html>

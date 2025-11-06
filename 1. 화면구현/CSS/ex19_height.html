@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 150px;
+            background-color: aqua;
+            color:aliceblue;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 20px;
+            }
+            /* 부모 요소에 display : flex를 주게되면 
+            좌에서 우로 배치된다 */
+        .container{
+            display: flex;
+        }
+        /* 내용이 많으면 넘침
+        높이가 고정 */
+        .fixed{
+            height: 100px;
+        }
+        /* overflow
+        hidden > 넘치면 가림
+        auto > 넘치면 스크롤 만들어줌 */
+        .min{
+            min-height: 100px;
+            overflow: auto;
+        }
+        .max{
+            max-height: 200px;
+        }
+        .auto{
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>height 속성 실습</h1>
+    <div class="container">
+        <div class="box fixed">잔즈다 갑촌잔대물의 논므네 토더아지가 버아에서 거데조 안컹조딘과, 거워늡롱긋습니까. 빈디칸이지 악랐어은는 아걉부터 숴냘무락젼일까 데절 누한은안다, 갱그동은 대일지. 쬬겨테간 츠재일고는데</div>
+        <div class="box min">의더아지가 버아에서 거데조 안컹조딘과, 거워늡롱긋습니까. 빈디칸이지 악랐어은는 아걉부터 숴냘무락젼일까 데절 누한은안다, 갱그동은 대일지. 쬬겨테간 츠재일고는데</div>
+        <div class="box max">잔즈다 갑 갱그동은 대일지. 쬬겨테간 츠재일고는데</div>
+        <div class="box auto">잔즈다dd 갑촌잔 논더아지가 버아에서 거데조 안컹조딘과, 거워늡롱긋습니까. 빈디칸이지 악랐어은는 아걉부터 숴냘무락젼일까 데절 누한은안다, 갱그동은 대일지. 쬬겨테간 츠재일고는데</div>
+    </div>
+</body>
+</html>

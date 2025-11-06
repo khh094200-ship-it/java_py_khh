@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* body 태그에 그라데이션 주기 */
+        body{
+            background: linear-gradient(rgba(0, 255, 255, 0.151),white);
+        }
+        /* 컨테이너에게 스타일 주기 */
+        .container{
+            max-width: 1200px;
+            width: 70%;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+            margin: 0px auto;
+        }
+        /* flex는 직계자식에게만 영향 */
+        header{
+            display:flex;
+        }
+        .profile-image{
+            width: :120px;
+            height:120px;
+            border:2px solid #3498db;
+            border-radius:50%;
+            aspect-ratio: 1/1;
+            object-fit:cover;
+        }
+        .job{
+            font-size: 1rem;
+            color :#ccc
+        }
+
+        .role{
+            color:#3498db;
+            font-size: 1rem;
+            font-weight: bold;
+            margin: 0 0 12px 0;
+        }
+        .description{
+            line-height: 1.6;
+            margin: 0;
+            color: #555;
+        }
+        h2{
+            border-left:6px solid #9b59b6;
+            padding-left: 10px;
+        }
+        .card{
+            background: #f8f9fc;
+            border: 1px solid #dfe6e9;
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        .card-title{
+            font-weight:bold;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        .project-container{
+            display: flex;
+            gap:16px;
+        }
+        .project-top-row{
+            display: flex;
+            /* space-between : 좌우로 벌리기 */
+            justify-content: space-between;
+        }
+        .project-container.card{
+            width: 450px;
+        }
+        .contact{
+            border-top: 2px solid rgb(231, 231, 231);
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 모든 요소들을 담는 그릇 역활 -->
+    <div class="container">
+        <!-- 프로필 영역 -->
+         <header>
+            <img class="profile-image" src=../images/dogss.jpg" width="100">
+            <div>
+                <h1>홍길동 / <span class="job">Front-End-Developer</span></h1>
+                    <p class="role">초보 웹 개발자 HTML/CSS 학습중</p>
+                    <p class="description">사용자가 보기 편한 화면을 만드는 것에 관심이 많다. 시멘틱 태그를 사용해서
+                    구조를 명확하게 작성하려고 노력하고 있으며 간단한 레이아웃,텍스트
+                    스타일링,배경,그림자 효과 등을 구현할 수 있다.</p>
+            </div>
+         </header>
+         <!-- 기술 프로젝트 영역 -->
+         <section>
+            <h2>기술 스택 / 사용 가능 기술</h2>
+            <div class="card">
+                <div class="card-title">HTML</div>
+                <p class="card-desc">
+                    <ul>
+                        <li>시맨틱 태그</li>
+                        <li>시맨틱 태그</li>
+                    </ul>
+                </p>
+            </div>
+            <h2>기술 스택 / 사용 가능 기술</h2>
+            <div class="card">
+                <div class="card-title">HTML</div>
+                <p class="card-desc">
+                    <ul>
+                        <li>시맨틱 태그</li>
+                        <li>시맨틱 태그</li>
+                    </ul>
+                </p>
+            </div>
+         </section>
+         <!-- 프로젝트 영역 -->
+        <h2>프로젝트</h2>
+            <section>
+                <div class="project-container">
+                    <!-- 프로젝트 1 -->
+                    <div class="card">
+                        <!-- 제목과 진행 사항 -->
+                        <div class="project-top-row">
+                            <div class="project-name">포트폴리오 페이지 만들기</div>
+                            <div class="project-period">2025.10 - 진행중</div>
+                            
+                        </div>
+                        <p class="project-desc">
+                            시맨틱 태그와 CSS 기본 스타일만으로 개인 포트폴리오 페이지를
+                            제작했다. 박스 모델,여백,테두리,그림자 등을 이용해 카드 형태의
+                            UI를 구성했고 flex
+                        </p>
+                    </div>
+                    <!-- 프로젝트 2 -->
+                    <div class="card">
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 연락처 영역 -->
+            <footer class="contact">
+                <h2>연락처</h2>
+                <p>이메일 :
+                    <a href="#">bskamja9@naver.com</a>
+                </p>
+                <p>이메일 :
+                    <a href="naver.com">bskamja9@naver.com</a>
+                </p>
+                <p>이메일 :
+                    <a href="#">bskamja9@naver.com</a>
+                </p
+            </footer>
+
+
+
+
+
+
+    </div>
+</body>
+</html>

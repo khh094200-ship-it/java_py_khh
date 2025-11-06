@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        .container{
+            flex-direction: column;
+            gap:10px;
+            padding: 40px;
+            display: flex;
+        }
+        /* 브라우저의 너비가 최소 768px를 넘으면
+        요소의 배치 방향을 row로 설정 */
+        @media(min-width:768px){
+            .container{
+                flex-direction: row;
+            }
+        }
+        .card{
+            border-radius: 10px;
+            border: solid;
+            padding: 10px;
+            flex: 1;
+        }
+    </style>
+
+<body>
+    <div class="container">
+        <div class="card">반응형 카드입니다</div>
+        <div class="card">반응형 카드입니다2</div>
+    </div>
+</body>
+</html>
