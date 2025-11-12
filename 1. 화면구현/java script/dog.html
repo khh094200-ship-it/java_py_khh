@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ko">
+<body>
+  <h2>🐶 랜덤 강아지 사진 가져오기</h2>
+  <button id="btn">사진 가져오기</button>
+  <br><br>
+  <img id="dog" width="300">
+
+<script>
+document.getElementById("btn").addEventListener("click", () => {
+  fetch("https://dog.ceo/api/breeds/image/random")
+    .then(res => {
+      if (!res.ok) {
+        // HTTP 응답 코드가 200대가 아닌 경우 에러를 던진다
+        throw new Error("데이터 불러오기 실패");
+      }
+      return res.json(); // JSON 형태로 변환한다
+    })
+    .then(data => {
+      // API가 반환한 이미지 URL을 이미지 태그에 넣는다
+      document.getElementById("dog").src = data.message;
+    })
+    .catch(err => {
+      console.error("에러:", err);
+      alert("데이터를 가져오는데 실패했다");
+    });
+});
+</script>
+</body>
+</html>
+</body>
+</html>
